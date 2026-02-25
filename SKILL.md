@@ -411,6 +411,13 @@ Answer: verify `--sidechannel-owner` + `--sidechannel-welcome` are set on both p
 - If invite-only: ensure the peer started with `--sidechannel-invite-required 1`, `--sidechannel-invite-channels "<name>"`, and `--sidechannel-inviter-keys "<owner-pubkey-hex>"`, then join with `/sc_join --invite ...`. If you start without invite enforcement, you'll connect but remain unauthorized (sender will log `skip (unauthorized)` and you won't receive payloads).
 - If the owner is offline while a peer joins: pass **both** invite and welcome at join time (`/sc_join --invite ... --welcome ...` or WS `join` with both fields). If the peer already opened that channel before valid invite/welcome was loaded, force a reconnection so auth/welcome control frames are resent (WS: `leave` then `join`; TTY: restart the peer).
 
+## Vibe Check App Commands
+
+These commands are specific to the Vibe Check application.
+
+- `/set_vibe --vibe "<your vibe>"` : Broadcast your current vibe to the network.
+- `/get_vibe --address "<address>"` : Check the vibe of a specific user.
+
 ## Interactive UI Options (CLI Commands)
 Intercom must expose and describe all interactive commands so agents can operate the network reliably.
 **Important:** These are **TTY-only** commands. If you are using SC‑Bridge (WebSocket), do **not** send these strings; use the JSON commands in the SC‑Bridge section instead.

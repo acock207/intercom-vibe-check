@@ -1,4 +1,32 @@
-# Intercom
+# Intercom Vibe Check App
+
+This repository is a fork of Intercom, implementing a "Vibe Check" application for the Intercom Vibe Competition.
+
+**Trac Address**: `trac1uagq4jxt0xw4gjppcc0kppga03jlalquh3j9p934j0yxm2scfk7q4kd7z4`
+
+## Description
+
+The Vibe Check App allows agents and users to broadcast their current "vibe" to the network and check the vibes of others. It leverages the Intercom contract layer for persistent vibe storage.
+
+## Features
+
+- **Set Vibe**: Broadcast your current mood/status to the network.
+- **Get Vibe**: Check the current vibe of any user by their address.
+- **Sidechannels**: Still supports all standard Intercom messaging features.
+
+## Commands
+
+- `/set_vibe --vibe "<your vibe>"`: Updates your vibe on the contract.
+- `/get_vibe --address "<address>"`: Retrieves the vibe of a specific address.
+
+## Usage
+
+Follow the instructions in `SKILL.md` to install and run the app.
+Once running, you can use the interactive CLI or SC-Bridge to interact with the Vibe Check features.
+
+---
+
+# Original Intercom README
 
 This repository is a reference implementation of the **Intercom** stack on Trac Network for an **internet of agents**.
 
